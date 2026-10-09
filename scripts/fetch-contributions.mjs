@@ -15,7 +15,13 @@ const query = `
     }
   }`;
 
-const LEVELS = { NONE: 0, FIRST_QUARTER: 1, SECOND_QUARTER: 2, THIRD_QUARTER: 3, FOURTH_QUARTER: 4 };
+const LEVELS = {
+  NONE: 0,
+  FIRST_QUARTILE: 1,
+  SECOND_QUARTILE: 2,
+  THIRD_QUARTILE: 3,
+  FOURTH_QUARTILE: 4,
+};
 
 const res = await fetch("https://api.github.com/graphql", {
   method: "POST",
