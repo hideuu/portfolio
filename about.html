@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | &lt;/Hideu.&gt;</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/animations.js"></script>
+    <script src="js/theme.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><h2 class="logo">&lt;/hideu.&gt;</h2></a>
+
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="about.html" class="nav-button active" aria-current="page">About</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </div>
+
+        <button id="theme-toggle" aria-label="Switch to light mode">
+            <span class="icon" id="theme-icon" style="--src: url('../assets/icons/sun.svg')"></span>
+        </button>
+    </header>
+
+    <section>
+        <div class="hero-container">
+            <img src="assets/icons/hero-img.png" alt="Portrait of Andy Hamon" class="hero-image">
+            <div class="hero-text-container">
+                <h1 class="page-title">Hi, I'm Andy.</h1>
+                <p class="hero-text">
+                    I'm an IT student pursuing a career in web, game, and software development, as well as network engineering. I enjoy building practical, engaging applications that people can use and play.
+                </p>
+                <p class="hero-text">
+                    When I'm not coding, I'm playing games, reading, running, and doomscrolling.
+                </p>
+                <div class="hero-button-container">
+                    <a href="projects.html" id="view-projects">View Projects</a>
+                    <a href="contact.html" id="message-me-button">Get in touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="skills-container">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-grid">
+            <div class="skill-category">
+                <h3 class="skill-category-title">Frontend</h3>
+                <div class="skill-chip-container">
+                    <span class="skill-chip"><img src="assets/icons/html.svg" alt="" class="skill-icon">HTML</span>
+                    <span class="skill-chip"><img src="assets/icons/css.svg" alt="" class="skill-icon">CSS</span>
+                    <span class="skill-chip"><img src="assets/icons/react.svg" alt="" class="skill-icon">React.js</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">Backend</h3>
+                <div class="skill-chip-container">
+                    <span class="skill-chip"><img src="assets/icons/nodejs.svg" alt="" class="skill-icon">Node.js</span>
+                    <span class="skill-chip"><img src="assets/icons/php.svg" alt="" class="skill-icon">PHP</span>
+                    <span class="skill-chip"><img src="assets/icons/express.svg" alt="" class="skill-icon">Express.js</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">Dev Tools</h3>
+                <div class="skill-chip-container">
+                    <span class="skill-chip"><img src="assets/icons/git.svg" alt="" class="skill-icon">Git</span>
+                    <span class="skill-chip"><img src="assets/icons/github.svg" alt="" class="skill-icon">GitHub</span>
+                    <span class="skill-chip"><img src="assets/icons/postman.svg" alt="" class="skill-icon">Postman</span>
+                    <span class="skill-chip"><img src="assets/icons/vscode.svg" alt="" class="skill-icon">VS Code</span>
+                    <span class="skill-chip"><img src="assets/icons/lark.svg" alt="" class="skill-icon">Lark</span>
+                </div>
+            </div>
+
+            <div class="skill-category skill-category-wide">
+                <h3 class="skill-category-title">Programming Languages</h3>
+                <div class="skill-chip-container">
+                    <span class="skill-chip"><img src="assets/icons/python.svg" alt="" class="skill-icon">Python</span>
+                    <span class="skill-chip"><img src="assets/icons/java.svg" alt="" class="skill-icon">Java</span>
+                    <span class="skill-chip"><img src="assets/icons/javascript.svg" alt="" class="skill-icon">JavaScript</span>
+                    <span class="skill-chip"><img src="assets/icons/sql.svg" alt="" class="skill-icon">SQL</span>
+                    <span class="skill-chip"><img src="assets/icons/csharp.svg" alt="" class="skill-icon">C#</span>
+                    <span class="skill-chip"><img src="assets/icons/cpp.svg" alt="" class="skill-icon">C++</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <span class="footer-text" id="manila-time">Manila</span>
+            <span class="footer-text">©2026 Andy Hamon</span>
+
+            <div class="social-container">
+            <a href="https://github.com/hideuu" class="social-link" aria-label="GitHub">
+                <span class="icon" style="--src: url('../assets/icons/brand-github.svg')"></span>
+            </a>
+            <a href="mailto:you@email.com" class="social-link" aria-label="Email">
+                <span class="icon" style="--src: url('../assets/icons/mail.svg')"></span>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+                <span class="icon" style="--src: url('../assets/icons/brand-instagram.svg')"></span>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+                <span class="icon" style="--src: url('../assets/icons/brand-facebook.svg')"></span>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+                <span class="icon" style="--src: url('../assets/icons/brand-linkedin.svg')"></span>
+            </a>
+            </div>
+        </div>
+
+        <p class="footer-quote">Tenma said that tomorrow will be a good day.</p>
+    </footer>
+
+    <script src="js/manila-time.js"></script>
+</body>
+</html>

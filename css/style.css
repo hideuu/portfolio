@@ -301,3 +301,436 @@ section {
   gap: 5px;
   font-size: 1rem;
 }
+
+.github__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.github__meta { font-size: 14px; color: var(--muted); }
+
+.github__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 21px;
+  background: #101010;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.github__calendar {
+  display: grid;
+  grid-auto-flow: column;            /* fill each column top to bottom, then move right */
+  grid-template-rows: repeat(7, 15px);
+  grid-auto-columns: 15px;
+  gap: 5px;
+  overflow-x: auto;
+}
+
+.day { display: block; width: 15px; height: 15px; border-radius: 3px; background: var(--lvl-0); }
+.lvl-1 { background: var(--lvl-1); }
+.lvl-2 { background: var(--lvl-2); }
+.lvl-3 { background: var(--lvl-3); }
+.lvl-4 { background: var(--lvl-4); }
+.day.is-empty { background: transparent; }
+
+.github__legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px var(--page-pad);
+}
+
+.footer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;   /* keeps the copyright truly centered */
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.social-container {
+  display: flex;
+  gap: 10px;
+  justify-self: end;
+}
+
+.social-link {
+  color: var(--muted);
+}
+
+.social-link:hover {
+  color: var(--fg);
+}
+
+.social-link .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-quote {
+  font-size: 0.875rem;
+  color: var(--quote);
+  text-align: center;
+}
+
+/* ==========================================================
+   ADD TO THE BOTTOM OF style.css
+   ========================================================== */
+
+/* ---------- shared fixes ---------- */
+.nav-button.active {
+  background-color: var(--button-bg);
+}
+
+.section-title {                         /* was missing in your CSS */
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.capsule-container {                     /* was missing in your CSS */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.link-icon {
+  color: var(--fg);                      /* replaces the hard-coded #fff so light mode works */
+}
+
+.page-header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.page-description {
+  max-width: 560px;
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ---------- footer ---------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px var(--page-pad);
+}
+
+.footer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.social-container {
+  display: flex;
+  gap: 10px;
+  justify-self: end;
+}
+
+.social-link {
+  color: var(--muted);
+}
+
+.social-link:hover {
+  color: var(--fg);
+}
+
+.social-link .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-quote {
+  font-size: 0.875rem;
+  color: var(--quote);
+  text-align: center;
+}
+
+/* ---------- projects page ---------- */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.link-container {
+  margin-top: auto;                      /* pushes the Source Code link to the bottom of every card */
+}
+
+/* ---------- about page ---------- */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 48px;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-category-wide {
+  grid-column: 1 / -1;
+}
+
+.skill-category-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.0625rem;
+}
+
+.skill-chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.skill-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- contact page ---------- */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--fg);
+  font: inherit;
+}
+
+.form-input::placeholder {
+  color: var(--muted);
+}
+
+textarea.form-input {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.honeypot {
+  display: none;
+}
+
+#send-message-button {
+  align-self: flex-start;
+  background-color: var(--cta-bg);
+  color: var(--cta-fg);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+#send-message-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#form-status {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 22px;
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--fg);
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.contact-info-row + .contact-info-row {
+  border-top: 1px solid var(--border);
+}
+
+.contact-info-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.contact-info-label .icon,
+.contact-info-row > .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-info-value {
+  color: var(--fg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* page load: hero and page headers */
+.hero-container,
+.page-header-container {
+  animation: fade-up 0.7s ease backwards;
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  opacity: 1;
+  animation: fade-up 0.6s ease backwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* hover effects */
+.project-cards {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-cards:hover {
+  transform: translateY(-4px);
+  border-color: var(--muted);
+}
+
+#view-projects,
+#message-me-button,
+#send-message-button {
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+#message-me-button:hover,
+#send-message-button:hover {
+  opacity: 0.88;
+}
+
+.nav-button {
+  transition: background-color 0.15s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-container,
+  .page-header-container,
+  .reveal.visible { animation: none; }
+  .reveal { opacity: 1; }
+  * { transition: none !important; }
+}
+
+#theme-toggle {
+  display: flex;
+  color: var(--fg);
+}
+
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.github__panel {
+  background: var(--panel);               /* was #101010 */
+  border: 1px solid var(--panel-border);  /* was #2a2a2a */
+}

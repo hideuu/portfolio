@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | &lt;/Hideu.&gt;</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/contact-form.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/theme.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><h2 class="logo">&lt;/hideu.&gt;</h2></a>
+
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="about.html" class="nav-button">About</a>
+            <a href="contact.html" class="nav-button active" aria-current="page">Contact</a>
+        </div>
+
+        <button id="theme-toggle" aria-label="Switch to light mode">
+            <span class="icon" id="theme-icon" style="--src: url('../assets/icons/sun.svg')"></span>
+        </button>
+    </header>
+
+    <section>
+        <div class="page-header-container">
+            <h1 class="page-title">Let's work together</h1>
+            <p class="page-description">
+                Got a project, a collab idea, or just want to say hi? Send a message and I'll reply soon.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <input type="hidden" name="access_key" value="544fd93c-f640-45d4-bb14-7df871fe9dd0">
+                <input type="hidden" name="subject" value="New message from my portfolio">
+                <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" name="name" type="text" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" type="email" class="form-input" placeholder="name@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-input" placeholder="Tell me about your project" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" id="send-message-button">Send message</button>
+                <p id="form-status" role="status"></p>
+            </form>
+
+            <div class="contact-info-container">
+                <span class="availability-badge">
+                    <span class="availability-dot"></span>
+                    Available for projects
+                </span>
+
+                <a href="mailto:you@email.com" class="contact-info-row">
+                    <span class="contact-info-label">Email</span>
+                    <span class="contact-info-value">you@email.com</span>
+                </a>
+                <a href="#" class="contact-info-row">
+                    <span class="contact-info-label">
+                        <span class="icon" style="--src: url('../assets/icons/brand-youtube.svg')"></span>
+                        YouTube
+                    </span>
+                    <span class="icon" style="--src: url('../assets/icons/arrow-up-right.svg')"></span>
+                </a>
+                <a href="#" class="contact-info-row">
+                    <span class="contact-info-label">
+                        <span class="icon" style="--src: url('../assets/icons/brand-instagram.svg')"></span>
+                        Instagram
+                    </span>
+                    <span class="icon" style="--src: url('../assets/icons/arrow-up-right.svg')"></span>
+                </a>
+                <a href="https://github.com/hideuu" class="contact-info-row">
+                    <span class="contact-info-label">
+                        <span class="icon" style="--src: url('../assets/icons/brand-github.svg')"></span>
+                        GitHub
+                    </span>
+                    <span class="icon" style="--src: url('../assets/icons/arrow-up-right.svg')"></span>
+                </a>
+                <div class="contact-info-row">
+                    <span class="contact-info-label">Based in</span>
+                    <span class="contact-info-value">Philippines</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <span class="footer-text" id="manila-time">Manila</span>
+            <span class="footer-text">©2026 Andy Hamon</span>
+
+            <div class="social-container">
+            <a href="https://github.com/hideuu" class="social-link" aria-label="GitHub">
+                <span class="icon" style="--src: url('../assets/icons/brand-github.svg')"></span>
+            </a>
+            <a href="mailto:you@email.com" class="social-link" aria-label="Email">
+                <span class="icon" style="--src: url('../assets/icons/mail.svg')"></span>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+                <span class="icon" style="--src: url('../assets/icons/brand-instagram.svg')"></span>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+                <span class="icon" style="--src: url('../assets/icons/brand-facebook.svg')"></span>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+                <span class="icon" style="--src: url('../assets/icons/brand-linkedin.svg')"></span>
+            </a>
+            </div>
+        </div>
+
+        <p class="footer-quote">Tenma said that tomorrow will be a good day.</p>
+    </footer>
+
+    <script src="js/manila-time.js"></script>
+</body>
+</html>

@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&lt;/Hideu.&gt;</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/animations.js"></script>
+    <script src="js/theme.js"></script>
 </head>
 <body>
     <header>
-        <h2 class="logo">&lt;/hideu.&gt;</h2>
+        <a href="index.html"><h2 class="logo">&lt;/hideu.&gt;</h2></a>
 
         <div class="nav-buttons">
-            <button class="nav-button">Home</button>
-            <button class="nav-button">Projects</button>
-            <button class="nav-button">About</button>
-            <button class="nav-button">Contact</button>
+            <a href="index.html" class="nav-button active" aria-current="page">Home</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="about.html" class="nav-button">About</a>
+            <a href="contact.html" class="nav-button">Contact</a>
         </div>
 
-        <span class="icon" style="--src: url('../assets/icons/sun.svg')" aria-label="Sun icon"></span>
+        <button id="theme-toggle" aria-label="Switch to light mode">
+            <span class="icon" id="theme-icon" style="--src: url('../assets/icons/sun.svg')"></span>
+        </button>
     </header>
 
     <section>
         <div class="hero-container">
-            <img src="assets/icons/hero-img.png" alt="hero-image" class="hero-image">
+            <img src="assets/icons/hero-img.png" alt="Portrait of Andy Hamon" class="hero-image">
             <div class="hero-text-container">
                 <h1 class="page-title">Hej, I'm Andy!</h1>
                 <p class="hero-text">
                     An IT student from the Philippines. Currently into learning game development, web applications, and networking. I also enjoy playing games, watching anime, and listening to music.
                 </p>
                 <div class="hero-button-container">
-                    <button id="view-projects">View Projects</button>
-                    <button id="message-me-button">Message Me:)</button>
+                    <a href="projects.html" id="view-projects">View Projects</a>
+                    <a href="contact.html" id="message-me-button">Message Me:)</a>
                 </div>
             </div>
         </div>
@@ -44,7 +45,7 @@
             <h2 class="section-title">Project Highlights</h2>
             <div class="project-cards-container">
                 <div class="project-cards">
-                    <img src="assets/projects/meljune-login.png" class="project-img">
+                    <img src="assets/projects/meljune-login.png" alt="Web-Based POS for Meljune Pet Supplies screenshot" class="project-img">
                     <h2>Web-Based POS for Meljune Pet Supplies</h2>
                     <p>A POS system built with MERN stack for Meljune Pet Supplies.</p>
                     <div class="capsule-container">
@@ -55,16 +56,15 @@
                     </div>
 
                     <div class="link-container">
-                        <button class="github-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="link-icon"><title>github-line</title><defs><path id="SVGmFUv3dVk" fill="none" stroke="currentColor" d="M3 16c1.5.5 1.5 3.5 5 3l1-.2m6 2.2v-3c0-.86-.363-1.636-.943-2.183a.01.01 0 0 1 .005-.018C17.48 15.117 20 12.78 20 10.001c0-1.262-.52-2.433-1.406-3.399a.01.01 0 0 1-.002-.01c.632-1.537.048-3.52-.096-3.591c-.139-.07-1.957.288-3.45 1.445a.01.01 0 0 1-.009.002A10.3 10.3 0 0 0 12 4c-1.076 0-2.103.16-3.04.449a.01.01 0 0 1-.009-.002C7.458 3.29 5.64 2.931 5.5 3.001c-.144.072-.728 2.057-.095 3.593a.01.01 0 0 1-.002.01C4.518 7.57 4 8.74 4 10.002c0 2.779 2.52 5.116 5.938 5.798a.01.01 0 0 1 .005.018A3 3 0 0 0 9 18v3"/></defs><use href="#SVGmFUv3dVk" stroke-linecap="round" stroke-width="2"/><use href="#SVGmFUv3dVk" stroke-linecap="round" stroke-width="2"/></svg>
+                        <a href="#" class="github-link">
+                            <span class="icon link-icon" style="--src: url('../assets/icons/brand-github.svg')"></span>
                             Source Code
-                        </button>
+                        </a>
                     </div>
-                    
                 </div>
 
                 <div class="project-cards">
-                    <img src="assets/projects/meljune-login.png" class="project-img">
+                    <img src="assets/projects/meljune-login.png" alt="Workout Logger Web App screenshot" class="project-img">
                     <h2>Workout Logger Web App</h2>
                     <p>A MERN application for logging workouts and tracking progress.</p>
                     <div class="capsule-container">
@@ -73,16 +73,17 @@
                         <span class="capsule">React</span>
                         <span class="capsule">Node.js</span>
                     </div>
+
                     <div class="link-container">
-                        <button class="github-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="link-icon"><title>github-line</title><defs><path id="SVGmFUv3dVk" fill="none" stroke="currentColor" d="M3 16c1.5.5 1.5 3.5 5 3l1-.2m6 2.2v-3c0-.86-.363-1.636-.943-2.183a.01.01 0 0 1 .005-.018C17.48 15.117 20 12.78 20 10.001c0-1.262-.52-2.433-1.406-3.399a.01.01 0 0 1-.002-.01c.632-1.537.048-3.52-.096-3.591c-.139-.07-1.957.288-3.45 1.445a.01.01 0 0 1-.009.002A10.3 10.3 0 0 0 12 4c-1.076 0-2.103.16-3.04.449a.01.01 0 0 1-.009-.002C7.458 3.29 5.64 2.931 5.5 3.001c-.144.072-.728 2.057-.095 3.593a.01.01 0 0 1-.002.01C4.518 7.57 4 8.74 4 10.002c0 2.779 2.52 5.116 5.938 5.798a.01.01 0 0 1 .005.018A3 3 0 0 0 9 18v3"/></defs><use href="#SVGmFUv3dVk" stroke-linecap="round" stroke-width="2"/><use href="#SVGmFUv3dVk" stroke-linecap="round" stroke-width="2"/></svg>
+                        <a href="#" class="github-link">
+                            <span class="icon link-icon" style="--src: url('../assets/icons/brand-github.svg')"></span>
                             Source Code
-                        </button>
+                        </a>
                     </div>
                 </div>
 
                 <div class="project-cards">
-                    <img src="assets/projects/meljune-login.png" class="project-img">
+                    <img src="assets/projects/meljune-login.png" alt="Apartment Management System screenshot" class="project-img">
                     <h2>Apartment Management System</h2>
                     <p>A python application for managing apartment rentals and tenant information.</p>
                     <div class="capsule-container">
@@ -90,15 +91,63 @@
                         <span class="capsule">Tkinter</span>
                         <span class="capsule">JSON</span>
                     </div>
+
                     <div class="link-container">
-                        <button class="github-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="link-icon"><title>github-line</title><defs><path id="SVGmFUv3dVk" fill="none" stroke="currentColor" d="M3 16c1.5.5 1.5 3.5 5 3l1-.2m6 2.2v-3c0-.86-.363-1.636-.943-2.183a.01.01 0 0 1 .005-.018C17.48 15.117 20 12.78 20 10.001c0-1.262-.52-2.433-1.406-3.399a.01.01 0 0 1-.002-.01c.632-1.537.048-3.52-.096-3.591c-.139-.07-1.957.288-3.45 1.445a.01.01 0 0 1-.009.002A10.3 10.3 0 0 0 12 4c-1.076 0-2.103.16-3.04.449a.01.01 0 0 1-.009-.002C7.458 3.29 5.64 2.931 5.5 3.001c-.144.072-.728 2.057-.095 3.593a.01.01 0 0 1-.002.01C4.518 7.57 4 8.74 4 10.002c0 2.779 2.52 5.116 5.938 5.798a.01.01 0 0 1 .005.018A3 3 0 0 0 9 18v3"/></defs><use href="#SVGmFUv3dVk" stroke-linecap="round" stroke-width="2"/><use href="#SVGmFUv3dVk" stroke-linecap="round" stroke-width="2"/></svg>
+                        <a href="#" class="github-link">
+                            <span class="icon link-icon" style="--src: url('../assets/icons/brand-github.svg')"></span>
                             Source Code
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="github">
+        <div class="github__head">
+            <h2 class="section-title">GitHub activity</h2>
+            <p class="github__meta" id="gh-meta">@hideuu</p>
+        </div>
+
+        <div class="github__panel">
+            <div class="github__calendar" id="gh-calendar"></div>
+
+            <div class="github__legend">
+                <span>Less</span>
+                <i class="day lvl-0"></i><i class="day lvl-1"></i><i class="day lvl-2"></i><i class="day lvl-3"></i><i class="day lvl-4"></i>
+                <span>More</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <span class="footer-text" id="manila-time">Manila</span>
+            <span class="footer-text">©2026 Andy Hamon</span>
+
+            <div class="social-container">
+                <a href="https://github.com/hideuu" class="social-link" aria-label="GitHub">
+                    <span class="icon" style="--src: url('../assets/icons/brand-github.svg')"></span>
+                </a>
+                <a href="mailto:you@email.com" class="social-link" aria-label="Email">
+                    <span class="icon" style="--src: url('../assets/icons/mail.svg')"></span>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <span class="icon" style="--src: url('../assets/icons/brand-instagram.svg')"></span>
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook">
+                    <span class="icon" style="--src: url('../assets/icons/brand-facebook.svg')"></span>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <span class="icon" style="--src: url('../assets/icons/brand-linkedin.svg')"></span>
+                </a>
+            </div>
+        </div>
+
+        <p class="footer-quote">Tenma said that tomorrow will be a good day.</p>
+    </footer>
+
+    <script src="js/github.js"></script>
+    <script src="js/manila-time.js"></script>
 </body>
 </html>
